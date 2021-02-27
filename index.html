@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Projeto </title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <span>iae meu</span>
+    <br/>
+    <b>texto em negrito</b>
+    <br/>
+    <i>texto em italico</i>
+    <p>novo paragrafo</p>
+    <p>meu nome é <b>solange <i>righi</i></b></p>
+
+    <hr>
+    <h1>INPUTS</h1>
+    <form>
+        <input type="submit">
+        <input type="button" value="botão"/>
+        <br/>
+        <input type="checkbox" id="t"/> 
+        <label for="t">teste</label>
+        <br/>
+        <input type="color" value="#f518b6"/>
+        <br/>
+        <input type="date" value="2021-02-27"/>
+        <br/>
+        <input type="datetime" placeholder="datetime"/> <!--caixinha de texto comum-->
+        <br/>
+        <input type="datetime-local"/> <!--caixinha de data e hora--> <!--não conseguimos deixar um value pré definido-->
+        <br/>
+        <input type="email" value="slngvitoria@gmail.com"/>
+        <br/>
+        <input type="file" accept="application/pdf, image/jpeg"/> <!--accept serve pra colocar o tipo de arquivo (mime types)-->
+        <br/>
+        <input type="hidden" value="te amo"/>
+        <br/>
+        <input type="image" src="./sol-5.jpg" alt="retornar" width="200"/> <!--width: largura e height: altura-->
+        <br/>
+        <input type="month" value="1998-04"/>
+        <br/>
+        <input type="number" value="22"/>
+        <br/>
+        <input type="password" value="texto" maxlength="6"/>
+        <br/>
+        <input type="radio" name="sexo" id="f"/> <!--os names precisam ser iguais pra nao marcar os dois ao mesmo tempo-->
+        <label for="f">feminino</label>
+        <input type="radio" name="sexo" id="m"/>
+        <label for="m">masculino</label>
+        <br/>
+        <input type="range" min="0" max="10" step="1"/> <!--reta com bolinha pra definir de 0 a 10-->
+        <br/>
+        <input type="reset"/> <!--simplesmente coloca um botao chamado redefinir pra voltar aos valores de antes-->
+        <br/>
+        <input type="search" placeholder="O que vc esta pensando?"/>
+        <br/>
+        <input type="tel" pattern="/[0-9]{2}[0-9]{2}[0-9]{9}/" placeholder="tel"/>
+        <br/>
+        <input type="text" value="oi eu sou a sol"/>
+        <br/>
+        <input type="time"/>
+        <br/>
+        <input type="url" placeholder="url"/> <!--caso nao tiver o modelo de uma url ele nao envia, entao nao precisa pre determinar a quantidade de letras-->
+        <br/>
+        <input type="week" value="2021-W11"/>
+        <br/>
+        <textarea cols="30" rows="10"></textarea>
+    </form>
+
+</body>
+</html>
