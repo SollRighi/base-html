@@ -6,85 +6,137 @@
   <title> Projeto </title>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 </head>
-<body>
-  <h1 class="centralizado">h1</h1>
-  <h2 class="centralizado">h2</h2>
-  <h3 class="centralizado">h3</h3>
-  <h4 class="centralizado">h4</h4>
-  <h5 class="centralizado">h5</h5>
-  <h6 class="centralizado">h6</h6>
-  <span>iae meu</span>
-  <br/>
-  <b>texto em negrito</b>
-  <br/>
-  <i>texto em italico</i>
-  <p>novo paragrafo</p>
-  <p>meu nome é <b>solange <i>righi</i></b></p>
-
+<body id="body">
+  <div class= "h-input-centralizado">
+    <h1>TÍTULOS QUE OCUPAM A TELA TODA</h1>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+  </div>
+  <hr/>
+  <div class="textos-flexiveis texto-maiusculo">
+    <span>Texto sem formatação</span>
+    <b>Texto em negrito</b>
+    <i>Texto em italico</i>
+    <p>Novo paragrafo</p>
+    <p>Meu nome é <b>solange <i>righi</i></b></p>
+  </div>
   <hr>
-  <h1>INPUTS</h1>
+  <h1 class="h-input-centralizado">INPUTS</h1>
   <form>
-    <div class="cor flex">
-      <div>
-        <input type="submit">
-        <input class="bot" type="button" value="botão"/>
+    <div class="textos-flexiveis">
+      <div class="largura-max">
+        <div class="div-bot">
+          <input onclick="aviso()" class="bot" type="button" value="BOTÃO"/> <!--script-mensagem: "vou te fazer umas perguntas, ok?"-->
+        </div>
         <br/>
         <input type="checkbox" id="t"/> 
-        <label for="t">teste</label>
+        <label for="t">Pode fazer!</label>
+        <hr style="width:25%;text-align:left;margin-left:0">
+
+        <label for="ceu">Qual a tua cor favorita?</label>
+        <input type="color" id="ceu" onchange="corfundo(event.target.value)"/>
+        <hr style="width:53%;text-align:left;margin-left:0">
+
+        <label for="datarelevante">Qual a data mais relevante pra tu?</label>
+        <input type="date" id="datarelevante" value="0000-00-00"/>
+        <hr style="width:95%;text-align:left;margin-left:0">
+
+        <label for="datahora">Que horas são? e a data?</label>
+        <input type="datetime" id="datahora" placeholder="datetime"/> <!--caixinha de texto comum-->
+        <hr style="width:87%;text-align:left;margin-left:0">
+
+        <label for="datetimelocal">Essa caixinha é mais bonita, coloca aí qualquer data, azar.</label>
+        <input type="datetime-local" id="datetimelocal"/> <!--caixinha de data e hora--> <!--não conseguimos deixar um value pré definido-->
+        <hr style="width:53%;text-align:left;margin-left:0">
+
+        <label for="mail">Aquele e-mailzão maroto:</label>
+        <input type="email" id="mail"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="imagem">Joga aí a imagem do teu animalzinho favorito:</label>
+        <input type="file" id="imagem"/> <!--accept serve pra colocar o tipo de arquivo (mime types)-->
+        <hr style="width:75%;text-align:left;margin-left:0">
+
+        <input type="hidden" value="pit"/>
         <br/>
-        <input type="color" value="#f518b6"/>
-        <br/>
-        <input type="date" value="2021-02-27"/>
-        <br/>
-        <input type="datetime" placeholder="datetime"/> <!--caixinha de texto comum-->
-        <br/>
-        <input type="datetime-local"/> <!--caixinha de data e hora--> <!--não conseguimos deixar um value pré definido-->
-        <br/>
-        <input type="email" value="slngvitoria@gmail.com" id="e"/>
-        <br/>
-        <input type="file" accept="application/pdf, image/jpeg"/> <!--accept serve pra colocar o tipo de arquivo (mime types)-->
-        <br/>
-        <input type="hidden" value="te amo"/>
-        <br/>
-        <input type="image" src="./sol-5.jpg" alt="retornar" width="200"/> <!--width: largura e height: altura-->
-        <br/>
+
+        <label for="foto">Este é o primeiro maior desastre do mundo.</label>
+        <input type="image" id="foto" src="./desastre.jpg" alt="imagem nao deu" width="500"/> <!--width: largura e height: altura-->
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="dataocorrida">Em que mês e ano ocorreu o acidente da ultima foto?</label>
+        <input type="month" id="dataocorrida" value="0000-00"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="quantidade">Quantos mortos este desastre causou?</label>
+        <input type="number" id="quantidade" value="22"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
       </div>
-      <div>
-        <input type="month" value="1998-04"/>
+      <div class="largura-max">
+        <label for="senha">Qual o nome do amor da sua vida? vai ser nosso segredinho e.e</label>
+        <input type="password" id="senha" value="texto" maxlength="6"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="radio">O que tu se considera?</label>
         <br/>
-        <input type="number" value="22"/>
-        <br/>
-        <input type="password" value="texto" maxlength="6"/>
-        <br/>
-        <input type="radio" name="sexo" id="f"/> <!--os names precisam ser iguais pra nao marcar os dois ao mesmo tempo-->
-        <label for="f">feminino</label>
-        <input type="radio" name="sexo" id="m"/>
-        <label for="m">masculino</label>
-        <br/>
-        <input type="range" min="0" max="10" step="1"/> <!--reta com bolinha pra definir de 0 a 10-->
-        <br/>
-        <input type="reset"/> <!--simplesmente coloca um botao chamado redefinir pra voltar aos valores de antes-->
-        <br/>
-        <input type="search" placeholder="O que vc esta pensando?"/>
-        <br/>
-        <input type="tel" pattern="/[0-9]{2}[0-9]{2}[0-9]{9}/" placeholder="tel"/>
-        <br/>
-        <input type="text" value="oi eu sou a sol"/>
-        <br/>
-        <input type="time"/>
-        <br/>
+        <input type="radio" name="sexo" id="m-b"/> <!--os names precisam ser iguais pra nao marcar os dois ao mesmo tempo-->
+        <label for="m-b">Macho Bagual</label>
+        <input type="radio" name="sexo" id="m-p"/>  
+        <label for="m-p">Mulherão da Poha</label>
+        <input type="radio" name="sexo" id="nem sei">
+        <label for="nem sei">Nem sei</label>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="nota">De 0 a 10 o quanto esse projetinho é legal? :D</label>
+        <input type="range" id="nota" min="0" max="10" step="1"/> <!--reta com bolinha pra definir de 0 a 10-->
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="pergunta">AGORA EU TE PERGUNTO MALANDRO</label> <!--colocar jogo no script-->
+        <input type="search" value="Onde tá a grana?"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="cll">Manda teu cll aí só pra mim treinar essa input. Ex: 00 00 00000-0000</label>
+        <input type="tel" id="cll" pattern="/[0-9]{2}[0-9]{2}[0-9]{9}/" placeholder="tel"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <input type="text" value="Calma, tu ta chegando no fim."/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="dormir">Qual a hora que tu dorme?</label>
+        <input type="time" id="dormir"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="url">Coloca aqui a url desse site.</label>
         <input type="url" id="url" placeholder="url"/> <!--caso nao tiver o modelo de uma url ele nao envia, entao nao precisa pre determinar a quantidade de letras-->
-        <br/>
-        <input type="week" value="2021-W11"/>
-        <br/>
-        <textarea cols="30" rows="10"></textarea>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="semana-ano">Em que semana e ano estamos?</label>
+        <input type="week" id="semana-ano" value="0000-W00"/>
+        <hr style="width:90%;text-align:left;margin-left:0">
+
+        <label for="assunto">Escolha um lugar e descreva-o:</label>
         <br/>
         <select>
-          <option value="a">Azul</option>
-          <option value="l">Laranja</option>
-          <option value="b">Branca</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="sp">São Paulo</option>
+          <option value="sc">Santa Catarina</option>
+          <option value="pr">Pernambuco</option>
         </select>
+        <br/>
+        <textarea cols="30" id="assunto" rows="10"></textarea>
+        <hr style="width:90%;text-align:left;margin-left:0">
+        
+        <input type="reset"/> <!--simplesmente coloca um botao chamado redefinir pra voltar aos valores de antes-->
+        <br/>
+        <input type="submit">
       </div>
     </div>  
   </form>
