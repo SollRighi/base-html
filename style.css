@@ -1,0 +1,38 @@
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cor {
+  background-color:#a1b7e7;
+}
+
+.centralizado {
+  text-align: center;
+}
+
+input {
+  margin: 5px;
+}
+
+#url:invalid {
+ background-color: red;
+}
+
+#url:valid{
+  background-color: green;
+}
+
+#e {
+  background-color: seagreen;
+  color: white;
+}
+
+.bot:hover {
+  text-transform: uppercase;
+}
+
+.bot:active {
+  background-color: hotpink;
+}
